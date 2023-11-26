@@ -47,7 +47,7 @@ x2 = df2.drop(columns=['diabetes'])
 x2_train,x2_test,y2_train,y2_test=train_test_split(x2,y2,test_size=0.2,random_state=0)
 
 # Create the model
-model2=RandomForestClassifier(n_estimators=800, random_state=42)
+model2=RandomForestClassifier(random_state=42)
 # Fit the model with train data (x2_train & y2_train)
 model2.fit(x2_train,y2_train)
 
@@ -58,7 +58,6 @@ model2.fit(x2_train,y2_train)
 # Set up the Diabetes Predictor page
 if rad=="Diabetes":
     st.title("Diabetes Predictor")
-    st.header("Check If You May Be Susceptible to Developing Diabetes")
     st.header("Check If You May Be Susceptible to Developing Diabetes")
     st.write("All The Values Should Be In Range Mentioned")
     # Set up features as input -> Blood Glucose, HbA1c, Body Mass Index, Age, Smoking History, Heart Disease, Hypertension and Gender.
